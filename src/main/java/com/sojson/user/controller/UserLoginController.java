@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.sojson.common.controller.BaseController;
 import com.sojson.common.model.UUser;
+import com.sojson.common.utils.JWT;
 import com.sojson.common.utils.LoggerUtils;
 import com.sojson.common.utils.StringUtils;
 import com.sojson.common.utils.VerifyCodeUtils;
@@ -125,6 +126,64 @@ public class UserLoginController extends BaseController {
 	}
 
 	
+	/**
+	 * 登录提交
+	 * Token verification function added by Chenney
+	 * @param entity		登录的UUser
+	 * @param rememberMe	是否记住
+	 * @param request		request，用来取登录之前Url地址，用来登录后跳转到没有登录之前的页面。
+	 * @return
+	 */
+	@RequestMapping(value="submitLogin",method=RequestMethod.POST)
+	@ResponseBody
+	public Map<String,Object> submitLogin(UUser entity,Boolean rememberMe,HttpServletRequest request){
+		
+		try {
+			UUser login = new UUser(entity);
+			
+			entity = TokenManager.login(entity,rememberMe);
+			String phoneNum = login.getphone();
+			//用用户电话号码作为token PAYLOAD那段加密发送到客户端
+			String jwtToken = JWT.sign(login, 60L*1000L*30L);
+			resultMap.put("status", 200);
+			resultMap.put("message", "登录成功");
+			resultMap.put("userToken", jwtToken);
+			resultMap.put("phoneNumber", phoneNum);
+			
+			
+			/**
+			 * shiro 获取登录之前的地址
+			 * 之前0.1版本这个没判断空。
+			 */
+			SavedRequest savedRequest = WebUtils.getSavedRequest(request);
+			String url = null ;
+			if(null != savedRequest){
+				url = savedRequest.getRequestUrl();
+			}
+			/**
+			 * 我们平常用的获取上一个请求的方式，在Session不一致的情况下是获取不到的
+			 * String url = (String) request.getAttribute(WebUtils.FORWARD_REQUEST_URI_ATTRIBUTE);
+			 */
+			LoggerUtils.fmtDebug(getClass(), "获取登录之前的URL:[%s]",url);
+			//如果登录之前没有地址，那么就跳转到首页。
+			if(StringUtils.isBlank(url)){
+				url = request.getContextPath() + "/user/index.shtml";
+			}
+			//跳转地址
+			resultMap.put("back_url", url);
+		/**
+		 * 这里其实可以直接catch Exception，然后抛出 message即可，但是最好还是各种明细catch 好点。。
+		 */
+		} catch (DisabledAccountException e) {
+			resultMap.put("status", 500);
+			resultMap.put("message", "帐号已经禁用");
+		} catch (Exception e) {
+			resultMap.put("status", 500);
+			resultMap.put("message", "帐号或密码错误");
+		}
+			
+		return resultMap;
+	}
 	
 	/**
 	 * 退出
