@@ -1,4 +1,4 @@
-本项目详细介绍请看：http://www.sojson.com/shiro （强烈推荐）
+本项目上传测试，本项目详细介绍请看：http://www.sojson.com/shiro （强烈推荐）
 
 Demo已经部署到线上，地址是http://shiro.itboy.net，
 管理员帐号：admin，密码：sojson.com 如果密码错误，请用sojson。
