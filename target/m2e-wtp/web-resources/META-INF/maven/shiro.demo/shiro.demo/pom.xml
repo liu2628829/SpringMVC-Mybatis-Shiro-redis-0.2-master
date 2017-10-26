@@ -47,6 +47,22 @@
 		</resources>
 	</build>
 	<dependencies>
+		<!--  阿里大于JAR-->
+		<dependency>
+			<groupId>my-jar</groupId><!--  自己随便取-->
+			<artifactId>my-jar</artifactId><!--  自己随便取-->
+			<version>1.0</version><!--  自己随便取-->
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/taobao-sdk-java-auto_1455552377940-20160607.jar</systemPath>
+		</dependency>
+		<!--  RSA加密JAR-->
+		<dependency>
+			<groupId>my-jar2</groupId><!--  自己随便取-->
+			<artifactId>my-jar2</artifactId><!--  自己随便取-->
+			<version>1.0</version><!--  自己随便取-->
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/bcprov-jdk15on-158.jar</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

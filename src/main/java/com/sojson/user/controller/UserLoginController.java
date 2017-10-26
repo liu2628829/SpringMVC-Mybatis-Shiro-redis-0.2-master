@@ -120,62 +120,11 @@ public class UserLoginController extends BaseController {
 		LoggerUtils.fmtDebug(getClass(), "注册后，登录完毕！", JSONObject.fromObject(entity).toString());
 		resultMap.put("message", "注册成功！");
 		resultMap.put("status", 200);
-		//把SessionId作为token返回
-//		UserOnlineBo bo = new UserOnlineBo();
-//		String token = bo.getSessionId();
-//		session token = session.getId().toString();
-//		resultMap.put("token", token);
+		
 		return resultMap;
 	}
 
-	/**
-	 * 注册 && 登录
-	 * @param vcode		验证码
-	 * @param entity	UUser实体
-	 * @return
-	 */
-	@RequestMapping(value="subRegister2",method=RequestMethod.POST)
-	@ResponseBody
-	public Map<String,Object> subRegister2(String vcode,UUser entity){
-		resultMap.put("status", 400);
-		if(!VerifyCodeUtils.verifyCode(vcode)){
-			resultMap.put("message", "验证码不正确！");
-			return resultMap;
-		}
-
-		String phone =  entity.getphone();
-/*		//
-		AlidayuSMS test = new AlidayuSMS();
-		test.sendMessage(phone);
-		*/
-
-		UUser user = userService.findUserByphone(phone);
-		if(null != user){
-			resultMap.put("message", "帐号|phone已经存在！");
-			return resultMap;
-		}
-		/* else  发送手机短信验证码  */
-		//	else AlidayuSMS.sendMessage(phone);
-
-
-
-		Date date = new Date();
-		entity.setCreateTime(date);
-		entity.setLastLoginTime(date);
-		//把密码md5
-		entity = UserManager.md5Pswd(entity);
-		//设置有效
-		entity.setStatus(UUser._1);
-
-		entity = userService.insert(entity);
-		LoggerUtils.fmtDebug(getClass(), "注册插入完毕！", JSONObject.fromObject(entity).toString());
-		entity = TokenManager.login(entity, Boolean.TRUE);
-		LoggerUtils.fmtDebug(getClass(), "注册后，登录完毕！", JSONObject.fromObject(entity).toString());
-		resultMap.put("message", "注册成功！");
-		resultMap.put("status", 200);
-		return resultMap;
-	}
-
+	
 	/**
 	 * 登录提交
 	 * @param entity		登录的UUser
