@@ -7,7 +7,118 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27d6c97d-b65c-4ec2-bfe0-ea77fe4e45bc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_auth0_java_jwt_2_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sojson/user/controller/UploadController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/controller/BaseController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/controller/BaseController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/controller/CommonController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/controller/CommonController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/UPermissionMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/UPermissionMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/URoleMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/URoleMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/URolePermissionMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/URolePermissionMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/UUserMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/UUserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/UUserRoleMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/dao/UUserRoleMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/model/UPermission.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/model/UPermission.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/model/URole.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/model/URole.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/model/URolePermission.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/model/URolePermission.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/model/UUser.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/model/UUser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/model/UUserRole.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/model/UUserRole.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/timer/ToTimer.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/timer/ToTimer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/CookieUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/CookieUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/DateUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/DateUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/LoggerUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/LoggerUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/MathUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/MathUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/SerializeUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/SerializeUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/SpringContextUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/SpringContextUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/StringUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/StringUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/UtilPath.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/UtilPath.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/VerifyCodeUtils$Verify.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/VerifyCodeUtils$Verify.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/VerifyCodeUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/VerifyCodeUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/VinuxPostMethod$1.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/VinuxPostMethod$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/VinuxPostMethod.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/VinuxPostMethod.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/rsa/Base64.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/rsa/Base64.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/rsa/RSAEncrypt.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/rsa/RSAEncrypt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/rsa/RSAtest4.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/rsa/RSAtest4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/rsa/RSAtest5.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/rsa/RSAtest5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/AlidayuSMS.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/AlidayuSMS.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/Captcha.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/Captcha.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/Encoder.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/Encoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/GifCaptcha.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/GifCaptcha.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/GifEncoder.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/GifEncoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/Quant.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/Quant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/Randoms.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/Randoms.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/SpecCaptcha.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/common/utils/vcode/SpecCaptcha.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/config/IConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/config/IConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/config/INI4j.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/config/INI4j.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/config/QQConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/config/QQConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/freemarker/extend/Ferrmarker.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/freemarker/extend/Ferrmarker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/freemarker/extend/FreeMarkerConfigExtend.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/freemarker/extend/FreeMarkerConfigExtend.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/freemarker/extend/FreeMarkerViewExtend.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/freemarker/extend/FreeMarkerViewExtend.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/freemarker/utils/FreemarkerTagUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/freemarker/utils/FreemarkerTagUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/BaseMybatisDao.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/BaseMybatisDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/Dialect.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/Dialect.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/MysqlDialect.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/MysqlDialect.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/OracleDialect.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/OracleDialect.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/Paginable.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/Paginable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/Pagination.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/Pagination.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/SimplePage.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/mybatis/page/SimplePage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/CustomShiroSessionDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/CustomShiroSessionDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/JedisManager.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/JedisManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/JedisShiroCache.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/JedisShiroCache.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/JedisShiroSessionRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/JedisShiroSessionRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/ShiroCacheManager.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/ShiroCacheManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/VCache.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/VCache.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/impl/CustomShiroCacheManager.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/impl/CustomShiroCacheManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/impl/JedisShiroCacheManager.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/cache/impl/JedisShiroCacheManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/KickoutSessionFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/KickoutSessionFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/LoginFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/LoginFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/PermissionFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/PermissionFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/RoleFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/RoleFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/ShiroFilterUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/ShiroFilterUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/SimpleAuthFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/filter/SimpleAuthFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/listenter/CustomSessionListener.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/listenter/CustomSessionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/service/ShiroManager.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/service/ShiroManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/service/impl/ShiroManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/service/impl/ShiroManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/session/CustomSessionManager.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/session/CustomSessionManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/session/SessionStatus.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/session/SessionStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/session/ShiroSessionRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/session/ShiroSessionRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/token/SampleRealm.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/token/SampleRealm.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/token/ShiroToken.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/token/ShiroToken.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/token/manager/TokenManager.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/shiro/token/manager/TokenManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/statics/APPKEY.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/statics/APPKEY.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/statics/Constant.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/statics/Constant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/tags/APITemplateModel.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/tags/APITemplateModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/tags/SuperCustomTag.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/tags/SuperCustomTag.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/core/tags/WYFTemplateModel.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/core/tags/WYFTemplateModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/bo/RolePermissionAllocationBo.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/bo/RolePermissionAllocationBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/bo/UPermissionBo.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/bo/UPermissionBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/bo/URoleBo.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/bo/URoleBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/bo/UserRoleAllocationBo.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/bo/UserRoleAllocationBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/controller/PermissionAllocationController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/controller/PermissionAllocationController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/controller/PermissionController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/controller/PermissionController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/controller/RoleController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/controller/RoleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/controller/UserRoleAllocationController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/controller/UserRoleAllocationController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/service/PermissionService.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/service/PermissionService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/service/RoleService.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/service/RoleService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/service/impl/PermissionServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/service/impl/PermissionServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/permission/service/impl/RoleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/permission/service/impl/RoleServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/bo/UserOnlineBo.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/bo/UserOnlineBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/Calculate.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/Calculate.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/MemberController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/MemberController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/RegistTest.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/RegistTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/Test.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/UserCoreController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/UserCoreController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/UserLoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/controller/UserLoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/manager/UserManager.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/manager/UserManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/service/UUserService.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/service/UUserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sojson/user/service/impl/UUserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/sojson/user/service/impl/UUserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro.demo-0.0.2-SNAPSHOT/WEB-INF/classes/com/sojson/user/controller/UserLoginController.class" afterPath="$PROJECT_DIR$/target/shiro.demo-0.0.2-SNAPSHOT/WEB-INF/classes/com/sojson/user/controller/UserLoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/shiro_demo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/shiro_demo_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro.demo.iml" afterPath="$PROJECT_DIR$/shiro.demo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sojson/common/utils/JWT.java" afterPath="$PROJECT_DIR$/src/main/java/com/sojson/common/utils/JWT.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro.demo-0.0.2-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/shiro.demo-0.0.2-SNAPSHOT/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,41 +134,18 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2078">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="702">
+              <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UUserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/user/service/impl/UUserServiceImpl.java">
+      <file leaf-file-name="UserLoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/user/controller/UserLoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-              <folding>
-                <element signature="e#1509#1510#0" expanded="true" />
-                <element signature="e#1556#1557#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UUserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/user/service/UUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UUserMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/dao/UUserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="81">
+              <caret line="30" column="44" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="30" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,110 +153,85 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UPermissionMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/mapper/UPermissionMapper.xml">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-404">
-              <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-              <folding>
-                <marker date="1505356858000" expanded="true" signature="1020:1090" ph="select from u_permission" />
-                <marker date="1505356858000" expanded="true" signature="1227:1262" ph="select count... u_permission" />
-                <marker date="1505356858000" expanded="true" signature="2013:2257" ph="select up.id... u_permission" />
-                <marker date="1505356858000" expanded="true" signature="2163:2217" ph="select id fr... u_role" />
-                <marker date="1505356858000" expanded="true" signature="2657:2802" ph="select p.url... u_permission" />
-                <marker date="1505356858000" expanded="true" signature="2918:3025" ph="select from u_permission" />
-                <marker date="1505356858000" expanded="true" signature="3109:3170" ph="delete from " />
-                <marker date="1505356858000" expanded="true" signature="3304:3430" ph="insert into u_permission... " />
-                <marker date="1505356858000" expanded="true" signature="4245:4490" ph="update u_per... " />
-                <marker date="1505356858000" expanded="true" signature="4595:4728" ph="update u_per... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="URoleMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/mapper/URoleMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2280">
-              <caret line="149" column="33" lean-forward="false" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
-              <folding>
-                <marker date="1505356858000" expanded="true" signature="1338:1435" ph="select r.typ... u_role" />
-                <marker date="1505356858000" expanded="true" signature="1522:1586" ph="select from u_role" />
-                <marker date="1505356858000" expanded="true" signature="1723:1752" ph="select count... u_role" />
-                <marker date="1505356858000" expanded="true" signature="2154:2316" ph="select ur.id... u_role" />
-                <marker date="1505356858000" expanded="true" signature="2235:2292" ph="select * fro... u_user_role" />
-                <marker date="1505356858000" expanded="true" signature="2459:2961" ph="select ur.id... u_role" />
-                <marker date="1505356858000" expanded="true" signature="3606:3888" ph="select ur.id... rid" />
-                <marker date="1505356858000" expanded="true" signature="3676:3741" ph="select rid f... u_user_role" />
-                <marker date="1505356858000" expanded="true" signature="4044:4145" ph="select from u_role" />
-                <marker date="1505356858000" expanded="true" signature="4229:4284" ph="delete from " />
-                <marker date="1505356858000" expanded="true" signature="4412:4548" ph="insert into u_role... " />
-                <marker date="1505356858000" expanded="true" signature="5349:5591" ph="update u_rol... " />
-                <marker date="1505356858000" expanded="true" signature="5690:5819" ph="update u_rol... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="URolePermissionMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/mapper/URolePermissionMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1505356858000" expanded="true" signature="578:684" ph="select from u_role_permission" />
-                <marker date="1505356858000" expanded="true" signature="787:893" ph="select from u_role_permission" />
-                <marker date="1505356858000" expanded="true" signature="983:1128" ph="select from u_role_permission" />
-                <marker date="1505356858000" expanded="true" signature="1192:1256" ph="delete from " />
-                <marker date="1505356858000" expanded="true" signature="1320:1384" ph="delete from " />
-                <marker date="1505356858000" expanded="true" signature="1450:1553" ph="delete from " />
-                <marker date="1505356858000" expanded="true" signature="1618:1689" ph="delete from " />
-                <marker date="1505356858000" expanded="true" signature="1792:1892" ph="insert into u_role_permission... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="URoleBo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/permission/bo/URoleBo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="176">
+              <caret line="185" column="24" lean-forward="false" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseMybatisDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/core/mybatis/BaseMybatisDao.java">
+      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/user/controller/UploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3186">
-              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="23">
+              <caret line="114" column="43" lean-forward="false" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2678#2686#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JWT.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/utils/JWT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UUserMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/mapper/UUserMapper.xml">
+      <file leaf-file-name="TokenInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/filter/TokenInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
-              <folding>
-                <marker date="1508208731423" expanded="true" signature="1384:1448" ph="select from u_user" />
-                <marker date="1508208731423" expanded="true" signature="1585:1614" ph="select count... u_user" />
-                <marker date="1508208731423" expanded="true" signature="1783:2322" ph="select u.id,... u_user" />
-                <marker date="1508208731423" expanded="true" signature="2424:2656" ph="select ur.id... u_role" />
-                <marker date="1508208731423" expanded="true" signature="2563:2616" ph="select id fr... u_user" />
-                <marker date="1508208731423" expanded="true" signature="2993:3138" ph="select from u_user" />
-                <marker date="1508208731423" expanded="true" signature="3235:3343" ph="select from u_user" />
-                <marker date="1508208731423" expanded="true" signature="3456:3557" ph="select from u_user" />
-                <marker date="1508208731423" expanded="true" signature="3641:3696" ph="delete from " />
-                <marker date="1508208731423" expanded="true" signature="3824:4148" ph="insert into u_user... " />
-                <marker date="1508208731423" expanded="true" signature="5586:6240" ph="update u_use... " />
-                <marker date="1508208731423" expanded="true" signature="6339:6674" ph="update u_use... " />
-                <marker date="1508208731423" expanded="true" signature="6636:6674" ph="update u_use... " />
-              </folding>
+            <state relative-caret-position="185">
+              <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/utils/responsedata/ResponseData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-512">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSAtest4.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/utils/rsa/RSAtest4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSAtest5.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/utils/rsa/RSAtest5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -247,7 +310,6 @@
         <option value="$MAVEN_REPOSITORY$/org/apache/shiro/shiro-all/1.2.5/shiro-all-1.2.5.jar!/org/apache/shiro/session/Session.class" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/test1/AlidayuSMS.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-cache.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/test1/aaa.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/test1/HttpUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/common/utils/VerifyCodeUtils.java" />
@@ -268,7 +330,6 @@
         <option value="$PROJECT_DIR$/init/sql/init_shiro_demo.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/common/utils/vcode/AlidayuSMS.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/core/shiro/filter/LoginFilter.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/common/utils/rsa/Base64.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/common/utils/rsa/RSAtest4.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/common/utils/rsa/RSAtest5.java" />
@@ -279,6 +340,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/user/controller/MemberController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sojson/user/controller/UserLoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sojson/common/utils/JWT.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sojson/user/controller/UploadController.java" />
       </list>
     </option>
   </component>
@@ -324,9 +389,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -378,6 +440,220 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="role" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -471,8 +747,185 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sojson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sojson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rsa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sojson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="responsedata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sojson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shiro.demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpringMVC-Mybatis-Shiro-redis-0.2-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sojson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1191,14 +1644,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239365000" />
+    <option name="totallyTimeSpent" value="246014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2764613" sideWeight="0.12371889" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2922591" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1209,13 +1662,45 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2933754" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2922591" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2764613" sideWeight="0.87115663" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2284041" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2764613" sideWeight="0.12371889" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2933754" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2764613" sideWeight="0.87628114" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1225,11 +1710,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.4941263" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1253,121 +1733,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar!/org/springframework/util/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/context/request/async/StandardServletAsyncWebRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/context/request/async/WebAsyncManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="628" column="0" lean-forward="false" selection-start-line="628" selection-start-column="0" selection-end-line="628" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/method/annotation/ModelFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/bind/annotation/ResponseBody.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/DualStackPlainSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6858">
-          <caret line="282" column="22" lean-forward="false" selection-start-line="282" selection-start-column="22" selection-end-line="282" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#8779#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1043#1044#0" expanded="false" />
-            <element signature="e#1083#1084#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar!/org/springframework/beans/factory/support/BeanDefinitionValueResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5373">
-          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.1.0/mybatis-3.1.0.jar!/org/apache/ibatis/builder/xml/XMLMapperBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6804">
-          <caret line="285" column="0" lean-forward="false" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/dao/UPermissionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/dao/URoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/dao/URolePermissionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/mapper/UUserRoleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-676">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,7 +1807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1446,10 +1814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding>
-            <element signature="e#680#681#0" expanded="false" />
-            <element signature="e#703#704#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1457,7 +1821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1465,7 +1828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="112" column="42" lean-forward="false" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,9 +1835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1491,7 +1850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-270">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1507,7 +1865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="25" column="66" lean-forward="false" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,7 +1880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1539,7 +1895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="59" column="13" lean-forward="false" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,7 +1910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1563,7 +1917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-101">
           <caret line="178" column="16" lean-forward="false" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1585,9 +1938,9 @@
             <node>com.sojson.core</node>
           </SelectedNodes>
           <Categories>
-            <Category>Methods</Category>
-            <Category>Constructors</Category>
             <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
@@ -1607,6 +1960,7 @@
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
@@ -1624,6 +1978,7 @@
           <settings layout="Hierarchic Group" zoom="1.0" x="258.0" y="120.0" />
           <SelectedNodes />
           <Categories />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -1661,7 +2016,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.9" x="507.55555555555554" y="236.33333333333331" />
+          <settings layout="Hierarchic Group" zoom="0.9" x="508.0" y="236.0" />
           <SelectedNodes />
           <Categories>
             <Category>Properties</Category>
@@ -1672,18 +2027,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/user/controller/UserLoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2078">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="702">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1692,7 +2039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3186">
           <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1700,7 +2046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-120">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1708,7 +2053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1716,9 +2060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1726,16 +2067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1505356858000" expanded="true" signature="578:684" ph="select from u_role_permission" />
-            <marker date="1505356858000" expanded="true" signature="787:893" ph="select from u_role_permission" />
-            <marker date="1505356858000" expanded="true" signature="983:1128" ph="select from u_role_permission" />
-            <marker date="1505356858000" expanded="true" signature="1192:1256" ph="delete from " />
-            <marker date="1505356858000" expanded="true" signature="1320:1384" ph="delete from " />
-            <marker date="1505356858000" expanded="true" signature="1450:1553" ph="delete from " />
-            <marker date="1505356858000" expanded="true" signature="1618:1689" ph="delete from " />
-            <marker date="1505356858000" expanded="true" signature="1792:1892" ph="insert into u_role_permission... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1743,10 +2074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <element signature="e#1509#1510#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1754,21 +2081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2280">
           <caret line="149" column="33" lean-forward="false" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
-          <folding>
-            <marker date="1505356858000" expanded="true" signature="1338:1435" ph="select r.typ... u_role" />
-            <marker date="1505356858000" expanded="true" signature="1522:1586" ph="select from u_role" />
-            <marker date="1505356858000" expanded="true" signature="1723:1752" ph="select count... u_role" />
-            <marker date="1505356858000" expanded="true" signature="2154:2316" ph="select ur.id... u_role" />
-            <marker date="1505356858000" expanded="true" signature="2235:2292" ph="select * fro... u_user_role" />
-            <marker date="1505356858000" expanded="true" signature="2459:2961" ph="select ur.id... u_role" />
-            <marker date="1505356858000" expanded="true" signature="3606:3888" ph="select ur.id... rid" />
-            <marker date="1505356858000" expanded="true" signature="3676:3741" ph="select rid f... u_user_role" />
-            <marker date="1505356858000" expanded="true" signature="4044:4145" ph="select from u_role" />
-            <marker date="1505356858000" expanded="true" signature="4229:4284" ph="delete from " />
-            <marker date="1505356858000" expanded="true" signature="4412:4548" ph="insert into u_role... " />
-            <marker date="1505356858000" expanded="true" signature="5349:5591" ph="update u_rol... " />
-            <marker date="1505356858000" expanded="true" signature="5690:5819" ph="update u_rol... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1776,21 +2088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
-          <folding>
-            <marker date="1508208731423" expanded="true" signature="1384:1448" ph="select from u_user" />
-            <marker date="1508208731423" expanded="true" signature="1585:1614" ph="select count... u_user" />
-            <marker date="1508208731423" expanded="true" signature="1783:2322" ph="select u.id,... u_user" />
-            <marker date="1508208731423" expanded="true" signature="2424:2656" ph="select ur.id... u_role" />
-            <marker date="1508208731423" expanded="true" signature="2563:2616" ph="select id fr... u_user" />
-            <marker date="1508208731423" expanded="true" signature="2993:3138" ph="select from u_user" />
-            <marker date="1508208731423" expanded="true" signature="3235:3343" ph="select from u_user" />
-            <marker date="1508208731423" expanded="true" signature="3456:3557" ph="select from u_user" />
-            <marker date="1508208731423" expanded="true" signature="3641:3696" ph="delete from " />
-            <marker date="1508208731423" expanded="true" signature="3824:4148" ph="insert into u_user... " />
-            <marker date="1508208731423" expanded="true" signature="5586:6240" ph="update u_use... " />
-            <marker date="1508208731423" expanded="true" signature="6339:6674" ph="update u_use... " />
-            <marker date="1508208731423" expanded="true" signature="6636:6674" ph="update u_use... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1798,17 +2095,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-404">
           <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/core/shiro/filter/LoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding>
-            <marker date="1505356858000" expanded="true" signature="1020:1090" ph="select from u_permission" />
-            <marker date="1505356858000" expanded="true" signature="1227:1262" ph="select count... u_permission" />
-            <marker date="1505356858000" expanded="true" signature="2013:2257" ph="select up.id... u_permission" />
-            <marker date="1505356858000" expanded="true" signature="2163:2217" ph="select id fr... u_role" />
-            <marker date="1505356858000" expanded="true" signature="2657:2802" ph="select p.url... u_permission" />
-            <marker date="1505356858000" expanded="true" signature="2918:3025" ph="select from u_permission" />
-            <marker date="1505356858000" expanded="true" signature="3109:3170" ph="delete from " />
-            <marker date="1505356858000" expanded="true" signature="3304:3430" ph="insert into u_permission... " />
-            <marker date="1505356858000" expanded="true" signature="4245:4490" ph="update u_per... " />
-            <marker date="1505356858000" expanded="true" signature="4595:4728" ph="update u_per... " />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-all/1.2.5/shiro-all-1.2.5.jar!/org/apache/shiro/web/filter/AccessControlFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-all/1.2.5/shiro-all-1.2.5.jar!/org/apache/shiro/web/filter/PathMatchingFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="21" column="82" lean-forward="false" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/utils/rsa/RSAtest4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3321">
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/utils/rsa/RSAtest5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/utils/responsedata/ResponseData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-512">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/utils/JWT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/common/filter/TokenInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springFramework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10962">
+          <caret line="455" column="0" lean-forward="false" selection-start-line="455" selection-start-column="0" selection-end-line="455" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="185" column="24" lean-forward="false" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/user/updateSelf.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" column="83" lean-forward="false" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/user/controller/UserLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="30" column="44" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="30" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sojson/user/controller/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="114" column="43" lean-forward="false" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2678#2686#0" expanded="true" />
           </folding>
         </state>
       </provider>

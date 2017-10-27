@@ -18,7 +18,7 @@ public class JWT {
 	
 	private static final String PAYLOAD = "payload";
 	
-	//加密，传入一个对戏和有效期
+	//加密，传入一个对象和有效期
 	public static <T> String sign (T object, long maxAge) {
 		
 		try {
