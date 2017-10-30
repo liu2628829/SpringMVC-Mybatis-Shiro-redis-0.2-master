@@ -66,7 +66,7 @@ public class UploadController {
             e.printStackTrace();
         }
 
-        return "redirect:http://localhost:8080/lesson5/upload/" + filename;
+        return "redirect:${basePath}/upload/" + filename;
     }
 
     @RequestMapping("/moreUpload")
@@ -95,7 +95,7 @@ public class UploadController {
 
                 try {
                     file.transferTo(targetFile);
-                    fileList.add("http://localhost:8080/lesson5/upload/" + file.getOriginalFilename());
+                    fileList.add("${basePath}/upload/" + file.getOriginalFilename());
                 } catch (IllegalStateException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();

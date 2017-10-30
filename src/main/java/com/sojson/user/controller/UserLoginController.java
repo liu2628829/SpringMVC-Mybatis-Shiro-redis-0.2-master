@@ -147,8 +147,8 @@ public class UserLoginController extends BaseController {
 			String jwtToken = JWT.sign(login, 60L*1000L*30L);
 			resultMap.put("status", 200);
 			resultMap.put("message", "登录成功");
-			resultMap.put("userToken", jwtToken);
-			resultMap.put("phoneNumber", phoneNum);
+			resultMap.put("token", jwtToken);
+			resultMap.put("phone", phoneNum);
 			
 			
 			/**
