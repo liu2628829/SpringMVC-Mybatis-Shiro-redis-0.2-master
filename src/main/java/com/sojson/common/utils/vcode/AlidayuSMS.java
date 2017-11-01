@@ -17,7 +17,7 @@ import net.sf.json.util.PropertyFilter;
 
 public class AlidayuSMS {
 
-    public boolean sendMessage(String phonenum,String verifyCode) {
+    public boolean sendMessage(String phonenum,String verifyCode,int template) {
 
 
 //官网的URL, http请求就用这个链接
@@ -32,14 +32,22 @@ public class AlidayuSMS {
         AlibabaAliqinFcSmsNumSendRequest req = new AlibabaAliqinFcSmsNumSendRequest();
         req.setExtend("123456"); //可选， 用于标识用户
         req.setSmsType("normal"); //默认使用 normal
-        req.setSmsFreeSignName("注册验证"); //短信签名
+
         //req.setSmsParam(json); //短信内容
         // {"code":"1234","product":"lmxceshi"}
         //生成随机字串
-     //   String verifyCode = VerifyCodeUtils.generateVerifyCode(6);
+        //   String verifyCode = VerifyCodeUtils.generateVerifyCode(6);
 
-        req.setSmsParam("{\"code\":\""+verifyCode+"\",\"product\":\"lmxceshi\"}"); //短信内容
-        req.setSmsTemplateCode("SMS_53840150"); //短信模板ID
+        req.setSmsParam("{\"code\":\""+verifyCode+"\",\"product\":\"matchman\"}"); //短信内容
+        if(template == 0){
+            req.setSmsFreeSignName("注册验证"); //短信签名
+            req.setSmsTemplateCode("SMS_53840150");//注册的短信模板
+        }
+        else if(template == 1 ){
+            req.setSmsFreeSignName("变更验证"); //短信签名
+            req.setSmsTemplateCode("SMS_53840148"); //忘记密码的短信模板
+        }
+
         req.setRecNum(phonenum);//手机号码，如果是多个手机号码可以用逗号隔开
 
         try {
@@ -72,6 +80,6 @@ public class AlidayuSMS {
         AlidayuSMS test = new AlidayuSMS();
 //        String alidayuCode = test.sendMessage("1551908903","123456");
 //        System.out.println(alidayuCode);
-        test.sendMessage("15519089033","123456");
+        test.sendMessage("15519089033","123456",1);
     }
 }

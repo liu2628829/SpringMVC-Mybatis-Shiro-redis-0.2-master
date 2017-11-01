@@ -17,16 +17,16 @@ public class TokenInterceptor implements HandlerInterceptor{
 
 
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
-			ModelAndView modelAndView) throws Exception {
+						   ModelAndView modelAndView) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	
+
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	//拦截每个请求
@@ -42,7 +42,7 @@ public class TokenInterceptor implements HandlerInterceptor{
 			String phoneNum = request.getParameter("phoneNumber");
 			//解密token后的phoneNum与用户传来的phoneNum不一致，一般都是token过期
 			if(null != phoneNum && null != login) {
-				if(phoneNum == login.getphone()) {
+				if(phoneNum.equals(login.getphone())) {
 					return true;
 				}
 				else
@@ -66,11 +66,11 @@ public class TokenInterceptor implements HandlerInterceptor{
 			return false;
 		}
 	}
-	
+
 	//	请求不通过，返回错误信息给客户端
 	private void responseMessage(HttpServletResponse response, PrintWriter out, ResponseData responseData) {
 		responseData = ResponseData.forbidden();
-		response.setContentType("application/json; charset=utf-8"); 
+		response.setContentType("application/json; charset=utf-8");
 		String json = JSONObject.toJSONString(responseData);
 		out.print(json);
 		out.flush();
