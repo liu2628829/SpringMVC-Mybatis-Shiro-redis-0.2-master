@@ -18,8 +18,8 @@ public class UserManager {
 	 * @return
 	 */
 	public static UUser md5Pswd(UUser user){
-		//密码为   phone + '#' + pswd，然后MD5
-		user.setPswd(md5Pswd(user.getphone(),user.getPswd()));
+		//密码为   phone + '#' + password，然后MD5
+		user.setPassword(md5Pswd(user.getLoginName(),user.getPassword()));
 		return user;
 	}
 	/**
@@ -28,10 +28,10 @@ public class UserManager {
 	 * @param pswd
 	 * @return
 	 */
-	public static String md5Pswd(String phone ,String pswd){
-		pswd = String.format("%s#%s", phone,pswd);
-		pswd = MathUtil.getMD5(pswd);
-		return pswd;
+	public static String md5Pswd(String loginName ,String password){
+		password = String.format("%s#%s", loginName,password);
+		password = MathUtil.getMD5(password);
+		return password;
 	}
 	/**
 	 * 把查询出来的roles 转换成bootstarp 的 tree数据

@@ -75,7 +75,7 @@ public class SampleRealm extends AuthorizingRealm {
 			user.setLastLoginTime(new Date());
 			userService.updateByPrimaryKeySelective(user);
 		}
-		return new SimpleAuthenticationInfo(user,user.getPswd(), getName());
+		return new SimpleAuthenticationInfo(user,user.getPassword(), getName());
     }
 
 	 /** 

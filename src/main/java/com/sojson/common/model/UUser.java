@@ -3,6 +3,8 @@ package com.sojson.common.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.shiro.session.Session;
+
 import net.sf.json.JSONObject;
 /**
  * 
@@ -33,16 +35,20 @@ public class UUser implements Serializable{
 	private Long id;
 	/**昵称*/
     private String nickname;
-    /**邮箱 | 登录帐号*/
+    /**电话  */
+    private String loginName;
+    /**登录帐号*/
     private String phone;
     /**密码*/
-    private transient String pswd;
+    private transient String password;
     /**创建时间*/
     private Date createTime;
     /**最后登录时间*/
     private Date lastLoginTime;
     /**1:有效，0:禁止登录*/
     private Long status;
+    /**记录用户状态的SessionId**/
+    private Serializable sessionId;
     
     
     
@@ -50,11 +56,13 @@ public class UUser implements Serializable{
     public UUser(UUser user) {
 		this.id = user.getId();
 		this.nickname = user.getNickname();
+		this.loginName = user.getLoginName();
 		this.phone = user.getphone();
-		this.pswd = user.getPswd();
+		this.password = user.getPassword();
 		this.createTime = user.getCreateTime();
 		this.lastLoginTime = user.getLastLoginTime();
 	}
+
 
 	public Long getId() {
         return id;
@@ -72,7 +80,13 @@ public class UUser implements Serializable{
         this.nickname = nickname;
     }
 
-    public String getphone() {
+    public String getLoginName() {
+		return loginName;
+	}
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
+	public String getphone() {
         return phone;
     }
 
@@ -86,12 +100,12 @@ public class UUser implements Serializable{
         this.phone = phone;
     }
 
-    public String getPswd() {
-        return pswd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPswd(String pswd) {
-        this.pswd = pswd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Date getCreateTime() {
@@ -112,4 +126,8 @@ public class UUser implements Serializable{
     public String toString(){
     	return JSONObject.fromObject(this).toString();
     }
+	public void setSession(Serializable sessionId) {
+		this.sessionId = sessionId;
+		
+	}
 }

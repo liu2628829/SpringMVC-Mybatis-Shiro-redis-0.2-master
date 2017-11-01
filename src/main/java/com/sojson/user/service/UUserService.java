@@ -24,9 +24,11 @@ public interface UUserService {
 
     int updateByPrimaryKey(UUser record);
     
-    UUser login(String phone ,String pswd);
+    UUser login(String phone ,String password);
 
 	UUser findUserByphone(String phone);
+	
+	UUser findUserByLoginName(String loginName);
 
 	Pagination<UUser> findByPage(Map<String, Object> resultMap, Integer pageNo,
 			Integer pageSize);

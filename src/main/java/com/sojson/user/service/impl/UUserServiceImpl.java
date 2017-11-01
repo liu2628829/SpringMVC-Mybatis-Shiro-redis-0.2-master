@@ -67,19 +67,24 @@ public class UUserServiceImpl extends BaseMybatisDao<UUserMapper> implements UUs
 	}
 
 	@Override
-	public UUser login(String phone ,String pswd) {
+	public UUser login(String loginName ,String password) {
 		Map<String,Object> map = new HashMap<String, Object>();
-		map.put("phone", phone);
-		map.put("pswd", pswd);
+		map.put("loginName", loginName);
+		map.put("password", password);
 		UUser user = userMapper.login(map);
 		return user;
+	}
+
+	@Override
+	public UUser findUserByLoginName(String loginName) {
+		return userMapper.findUserByLoginName(loginName);
 	}
 
 	@Override
 	public UUser findUserByphone(String phone) {
 		return userMapper.findUserByphone(phone);
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public Pagination<UUser> findByPage(Map<String, Object> resultMap,
@@ -199,6 +204,8 @@ public class UUserServiceImpl extends BaseMybatisDao<UUserMapper> implements UUs
 		return resultMap;
 	
 	}
+
+	
 	
 	
 	

@@ -72,13 +72,13 @@ public class UserCoreController extends BaseController {
 	 * 密码修改
 	 * @return
 	 */
-	@RequestMapping(value="updatePswd",method=RequestMethod.POST)
+	@RequestMapping(value="updatePassword",method=RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> updatePswd(String pswd,String newPswd){
+	public Map<String,Object> updatePassword(String password,String newPassword){
 		//根据当前登录的用户帐号 + 老密码，查询。
 		String phone = TokenManager.getToken().getphone();
-				pswd = UserManager.md5Pswd(phone, pswd);
-		UUser	user = userService.login(phone, pswd);
+				password = UserManager.md5Pswd(phone, password);
+		UUser	user = userService.login(phone, password);
 		
 		if("admin".equals(phone)){
 			resultMap.put("status", 300);
@@ -90,7 +90,7 @@ public class UserCoreController extends BaseController {
 			resultMap.put("status", 300);
 			resultMap.put("message", "密码不正确！");
 		}else{
-			user.setPswd(newPswd);
+			user.setPassword(newPassword);
 			//加工密码
 			user = UserManager.md5Pswd(user);
 			//修改密码

@@ -101,7 +101,7 @@ public class TokenManager {
 	 * @return
 	 */
 	public static UUser login(UUser user,Boolean rememberMe){
-		ShiroToken token = new ShiroToken(user.getphone(), user.getPswd());
+		ShiroToken token = new ShiroToken(user.getLoginName(), user.getPassword());
 		token.setRememberMe(rememberMe);
 		SecurityUtils.getSubject().login(token);
 		return getToken();

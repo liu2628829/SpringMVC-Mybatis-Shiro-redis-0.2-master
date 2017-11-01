@@ -22,6 +22,8 @@ public interface UUserMapper {
 	UUser login(Map<String, Object> map);
 
 	UUser findUserByphone(String phone);
+	
+	UUser findUserByLoginName(String loginName);
 
 	List<URoleBo> selectRoleByUserId(Long id);
 

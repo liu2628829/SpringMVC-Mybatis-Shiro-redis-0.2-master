@@ -1,5 +1,6 @@
 package com.sojson.user.controller;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
 
@@ -11,6 +12,7 @@ import com.sojson.user.bo.UserOnlineBo;
 import net.sf.json.JSONObject;
 
 import org.apache.shiro.authc.DisabledAccountException;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.context.annotation.Scope;
@@ -91,15 +93,15 @@ public class UserLoginController extends BaseController {
 			return resultMap;
 		}
 
-		String phone =  entity.getphone();
+		String loginName =  entity.getLoginName();
 /*		//
 		AlidayuSMS test = new AlidayuSMS();
 		test.sendMessage(phone);
 		*/
 
-		UUser user = userService.findUserByphone(phone);
+		UUser user = userService.findUserByLoginName(loginName);
 		if(null != user){
-			resultMap.put("message", "帐号|phone已经存在！");
+			resultMap.put("message", "帐号已经存在！");
 			return resultMap;
 		}
 		/* else  发送手机短信验证码  */
@@ -140,15 +142,19 @@ public class UserLoginController extends BaseController {
 		
 		try {
 			UUser login = new UUser(entity);
-			
+			/**
+			 * token太复杂太长，暂时注释掉弃用，将来用
+			 */
 			entity = TokenManager.login(entity,rememberMe);
-			String phoneNum = login.getphone();
+			//String phoneNum = login.getphone();
 			//用用户电话号码作为token PAYLOAD那段加密发送到客户端
-			String jwtToken = JWT.sign(login, 60L*1000L*30L);
+			//String jwtToken = JWT.sign(login, 60L*1000L*30L);
+			String uSession = (String) TokenManager.getSession().getId();
+			login.setSession(uSession);
 			resultMap.put("status", 200);
 			resultMap.put("message", "登录成功");
-			resultMap.put("token", jwtToken);
-			resultMap.put("phone", phoneNum);
+			resultMap.put("session", uSession);
+			//resultMap.put("phone", phoneNum);
 			
 			
 			/**
@@ -241,33 +247,33 @@ public class UserLoginController extends BaseController {
 	 * @param entity	UUser实体
 	 * @return
 	 */
-	@RequestMapping(value="forgetPswd",method=RequestMethod.POST)
+	@RequestMapping(value="forgetPassword",method=RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> forgetPswd(String vcode,UUser entity){
+	public Map<String,Object> forgetPassword(String vcode,UUser entity){
 		resultMap.put("status", 400);
 	//	System.out.println(vcode);
-		if(!VerifyCodeUtils.verifyCode(vcode)){
+		if(!VerifyCodeUtils.verifyCode(vcode)){ 
 			resultMap.put("message", "验证码不正确！");
 			return resultMap;
 		}
 
 		//获取手机号和新密码
-		String phone =  entity.getphone();
-		String newPswd =  entity.getPswd();
+		String loginName =  entity.getLoginName();
+		String newPsswd =  entity.getPassword();
 	//	System.out.println(phone);
-		resultMap.put("message",phone);
+		resultMap.put("message",loginName);
 		//根据用户手机号查询。
-		UUser user = userService.findUserByphone(phone);
+		UUser user = userService.findUserByphone(loginName);
 		if(null == user){
 			resultMap.put("message", "帐号|phone不存在！");
 			return resultMap;
 		}
-		if("admin".equals(phone)){
+		if("admin".equals(loginName)){
 			resultMap.put("status", 300);
 			resultMap.put("message", "管理员不准修改密码。");
 			return resultMap;
 		}
-		user.setPswd(newPswd);
+		user.setPassword(newPsswd);
 		//加工密码
 		user = UserManager.md5Pswd(user);
 		//修改密码
@@ -284,29 +290,29 @@ public class UserLoginController extends BaseController {
 	 * @param entity	UUser实体
 	 * @return
 	 */
-	@RequestMapping(value="updatePswd1",method=RequestMethod.POST)
+	@RequestMapping(value="updatePassword",method=RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> updatePswd1(String vcode,UUser entity){
+	public Map<String,Object> updatePassword(String vcode,UUser entity){
 		resultMap.put("status", 400);
 		if(!VerifyCodeUtils.verifyCode(vcode)){
 			resultMap.put("message", "验证码不正确！");
 			return resultMap;
 		}
 
-		String phone =  entity.getphone();
-		String newPswd =  entity.getPswd();
+		String loginName =  entity.getLoginName();
+		String newPsswd =  entity.getPassword();
 		//根据用户手机号查询。
-		UUser user = userService.findUserByphone(phone);
+		UUser user = userService.findUserByphone(loginName);
 		if(null == user){
 			resultMap.put("message", "帐号|phone不存在！");
 			return resultMap;
 		}
-		if("admin".equals(phone)){
+		if("admin".equals(loginName)){
 			resultMap.put("status", 300);
 			resultMap.put("message", "管理员不准修改密码。");
 			return resultMap;
 		}
-		user.setPswd(newPswd);
+		user.setPassword(newPsswd);
 		/*   不需要后台加密密码，只要把前台传过来的RSA加密密码，放进去就行
 		//加工密码
 		user = UserManager.md5Pswd(user);
@@ -324,8 +330,8 @@ public class UserLoginController extends BaseController {
 		UserLoginController test = new UserLoginController();
 		UUser user = new UUser();
 //		user.setNickname("aaa");
-		user.setphone("15519089033");
-		user.setPswd("123123");
+		user.setLoginName("15519089033");
+		user.setPassword("123123");
 	//	test.forgetPswd(user);
 	//	Map<String,Object> a = test.getMessage(user);
 		//a.get("verifyCode");
