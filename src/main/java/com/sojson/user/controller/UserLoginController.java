@@ -132,20 +132,19 @@ public class UserLoginController extends BaseController {
 	 * 登录提交
 	 * Token verification function added by Chenney
 	 * @param entity		登录的UUser
-	 * @param rememberMe	是否记住
 	 * @param request		request，用来取登录之前Url地址，用来登录后跳转到没有登录之前的页面。
 	 * @return
 	 */
 	@RequestMapping(value="submitLogin",method=RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> submitLogin(UUser entity,Boolean rememberMe,HttpServletRequest request){
+	public Map<String,Object> submitLogin(UUser entity,HttpServletRequest request){
 		
 		try {
 			UUser login = new UUser(entity);
 			/**
 			 * token太复杂太长，暂时注释掉弃用，将来用
 			 */
-			entity = TokenManager.login(entity,rememberMe);
+			entity = TokenManager.login(entity,true);
 			//String phoneNum = login.getphone();
 			//用用户电话号码作为token PAYLOAD那段加密发送到客户端
 			//String jwtToken = JWT.sign(login, 60L*1000L*30L);
@@ -213,19 +212,19 @@ public class UserLoginController extends BaseController {
 	/**
 	 * 获取验证码
 	 * @param entity	登录的UUser
-
+	 * @param template	选择短信模板，0是用户注册，1是修改密码
 	 * @return
 	 */
 	@RequestMapping(value="getMessage",method=RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> getMessage(UUser entity) {
+	public Map<String,Object> getMessage(UUser entity,int template) {
 		try {
 			AlidayuSMS test = new AlidayuSMS();
 			//生成随机字串
 			String verifyCode = VerifyCodeUtils.generateVerifyCode(6);
 			//存入Shiro会话session
 			TokenManager.setVal2Session(VerifyCodeUtils.V_CODE, verifyCode);
-			if(test.sendMessage(entity.getphone(),verifyCode)){
+			if(test.sendMessage(entity.getphone(),verifyCode,template)){
 				resultMap.put("status", 200);
 				resultMap.put("message", "发送短信验证码成功");
 				resultMap.put("verifyCode", verifyCode);
