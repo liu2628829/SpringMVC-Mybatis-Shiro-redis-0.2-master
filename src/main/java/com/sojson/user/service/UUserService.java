@@ -24,9 +24,9 @@ public interface UUserService {
 
     int updateByPrimaryKey(UUser record);
     
-    UUser login(String phone ,String password);
+    UUser login(String loginName ,String password);
 
-	UUser findUserByphone(String phone);
+	UUser findUserByPhone(String phone);
 	
 	UUser findUserByLoginName(String loginName);
 

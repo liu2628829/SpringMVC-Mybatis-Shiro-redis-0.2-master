@@ -45,6 +45,7 @@ public class UUserServiceImpl extends BaseMybatisDao<UUserMapper> implements UUs
 		return entity;
 	}
 
+	
 	@Override
 	public UUser insertSelective(UUser entity) {
 		userMapper.insertSelective(entity);
@@ -81,7 +82,7 @@ public class UUserServiceImpl extends BaseMybatisDao<UUserMapper> implements UUs
 	}
 
 	@Override
-	public UUser findUserByphone(String phone) {
+	public UUser findUserByPhone(String phone) {
 		return userMapper.findUserByphone(phone);
 	}
 	

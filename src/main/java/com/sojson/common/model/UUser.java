@@ -48,7 +48,7 @@ public class UUser implements Serializable{
     /**1:有效，0:禁止登录*/
     private Long status;
     /**记录用户状态的SessionId**/
-    private Serializable sessionId;
+    private String sessionId;
     
     
     
@@ -59,6 +59,7 @@ public class UUser implements Serializable{
 		this.loginName = user.getLoginName();
 		this.phone = user.getphone();
 		this.password = user.getPassword();
+		this.sessionId = user.getSession();
 		this.createTime = user.getCreateTime();
 		this.lastLoginTime = user.getLastLoginTime();
 	}
@@ -126,8 +127,11 @@ public class UUser implements Serializable{
     public String toString(){
     	return JSONObject.fromObject(this).toString();
     }
-	public void setSession(Serializable sessionId) {
+	public void setSession(String sessionId) {
 		this.sessionId = sessionId;
 		
+	}
+	public String getSession() {
+		return sessionId;
 	}
 }

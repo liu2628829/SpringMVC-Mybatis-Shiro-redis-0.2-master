@@ -76,11 +76,11 @@ public class UserCoreController extends BaseController {
 	@ResponseBody
 	public Map<String,Object> updatePassword(String password,String newPassword){
 		//根据当前登录的用户帐号 + 老密码，查询。
-		String phone = TokenManager.getToken().getphone();
-				password = UserManager.md5Pswd(phone, password);
-		UUser	user = userService.login(phone, password);
+		String loginName = TokenManager.getToken().getLoginName();
+				password = UserManager.md5Pswd(loginName, password);
+		UUser	user = userService.login(loginName, password);
 		
-		if("admin".equals(phone)){
+		if("admin".equals(loginName)){
 			resultMap.put("status", 300);
 			resultMap.put("message", "管理员不准修改密码。");
 			return resultMap;

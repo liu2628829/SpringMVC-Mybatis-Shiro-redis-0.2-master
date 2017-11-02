@@ -137,19 +137,23 @@ public class UserLoginController extends BaseController {
 	 */
 	@RequestMapping(value="submitLogin",method=RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> submitLogin(UUser entity,HttpServletRequest request){
+	public Map<String,Object> submitLogin(UUser entity, HttpServletRequest request){
 		
 		try {
-			UUser login = new UUser(entity);
+			UUser login = userService.findUserByLoginName(entity.getLoginName());
+			
 			/**
 			 * token太复杂太长，暂时注释掉弃用，将来用
 			 */
-			entity = TokenManager.login(entity,true);
+			entity = TokenManager.login(entity, Boolean.TRUE);
 			//String phoneNum = login.getphone();
 			//用用户电话号码作为token PAYLOAD那段加密发送到客户端
 			//String jwtToken = JWT.sign(login, 60L*1000L*30L);
-			String uSession = (String) TokenManager.getSession().getId();
+			String uSession = (String)TokenManager.getSession().getId();
+			
 			login.setSession(uSession);
+			userService.updateByPrimaryKeySelective(login);
+			
 			resultMap.put("status", 200);
 			resultMap.put("message", "登录成功");
 			resultMap.put("session", uSession);
@@ -262,9 +266,9 @@ public class UserLoginController extends BaseController {
 	//	System.out.println(phone);
 		resultMap.put("message",loginName);
 		//根据用户手机号查询。
-		UUser user = userService.findUserByphone(loginName);
+		UUser user = userService.findUserByLoginName(loginName);
 		if(null == user){
-			resultMap.put("message", "帐号|phone不存在！");
+			resultMap.put("message", "帐号不存在！");
 			return resultMap;
 		}
 		if("admin".equals(loginName)){
@@ -301,9 +305,9 @@ public class UserLoginController extends BaseController {
 		String loginName =  entity.getLoginName();
 		String newPsswd =  entity.getPassword();
 		//根据用户手机号查询。
-		UUser user = userService.findUserByphone(loginName);
+		UUser user = userService.findUserByLoginName(loginName);
 		if(null == user){
-			resultMap.put("message", "帐号|phone不存在！");
+			resultMap.put("message", "帐号不存在！");
 			return resultMap;
 		}
 		if("admin".equals(loginName)){
@@ -325,12 +329,12 @@ public class UserLoginController extends BaseController {
 		return resultMap;
 	}
 
-	public static void main(String[] args){
-		UserLoginController test = new UserLoginController();
-		UUser user = new UUser();
+	//public static void main(String[] args){
+		//UserLoginController test = new UserLoginController();
+		//UUser user = new UUser();
 //		user.setNickname("aaa");
-		user.setLoginName("15519089033");
-		user.setPassword("123123");
+		//user.setLoginName("15519089033");
+		//user.setPassword("123123");
 	//	test.forgetPswd(user);
 	//	Map<String,Object> a = test.getMessage(user);
 		//a.get("verifyCode");
@@ -343,7 +347,7 @@ public class UserLoginController extends BaseController {
 
 //		test.getMessage1();
 
-	}
+//	}
 
 
 

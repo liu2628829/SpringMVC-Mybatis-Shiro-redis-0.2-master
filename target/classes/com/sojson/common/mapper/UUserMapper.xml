@@ -80,12 +80,19 @@
     from u_user
     where loginName = #{loginName,jdbcType=VARCHAR} and  password = #{password,jdbcType=VARCHAR}
   </select>
-  <!-- 根据邮箱|帐号查询 -->
+  <!-- 帐号查询 -->
   <select id="findUserByLoginName" resultMap="BaseResultMap" >
   	 select 
     <include refid="Base_Column_List" />
     from u_user
     where loginName = #{loginName,jdbcType=VARCHAR}
+  </select>
+  
+  <select id="findUserByPhone" resultMap="BaseResultMap" >
+  	 select 
+    <include refid="Base_Column_List" />
+    from u_user
+    where phone = #{phone,jdbcType=VARCHAR}
   </select>
   
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
@@ -100,13 +107,14 @@
   </delete>
   <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.sojson.common.model.UUser" >
     insert into u_user (id, nickname, phone, loginName,
-      password, create_time, last_login_time,status
+      password, create_time, last_login_time, status
       )
     values (#{id,jdbcType=BIGINT}, #{nickname,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
-    #{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+    #{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
     #{createTime,jdbcType=TIMESTAMP}, #{lastLoginTime,jdbcType=TIMESTAMP},#{status,jdbcType=BIGINT}
       )
   </insert>
+  
   <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.sojson.common.model.UUser" >
     insert into u_user
     <trim prefix="(" suffix=")" suffixOverrides="," >
