@@ -80,7 +80,7 @@ public class KickoutSessionFilter extends AccessControlFilter {
 			if (ShiroFilterUtils.isAjax(request) ) {
 				LoggerUtils.debug(getClass(), "当前用户已经在其他地方登录，并且是Ajax请求！");
 				resultMap.put("user_status", "300");
-				resultMap.put("message", "您已经在其他地方登录，请重新登录！");
+				resultMap.put("desc", "您已经在其他地方登录，请重新登录！");
 				out(response, resultMap);
 			}
 			return  Boolean.FALSE;

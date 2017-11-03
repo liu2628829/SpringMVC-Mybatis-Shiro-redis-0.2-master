@@ -94,13 +94,16 @@ public class RoleServiceImpl extends BaseMybatisDao<URoleMapper> implements Role
 					count+=this.deleteByPrimaryKey(id);
 				}
 			}
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 			resultMap.put("count", count);
 			resultMap.put("resultMsg", resultMsg);
 		} catch (Exception e) {
 			LoggerUtils.fmtError(getClass(), e, "根据IDS删除用户出现错误，ids[%s]", ids);
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "删除出现错误，请刷新后再试！");
+			resultMap.put("data", null);
+			resultMap.put("desc", "删除出现错误，请刷新后再试！");
 		}
 		return resultMap;
 	}

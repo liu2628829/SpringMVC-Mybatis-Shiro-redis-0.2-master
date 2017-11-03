@@ -87,9 +87,11 @@ public class UserLoginController extends BaseController {
 	@RequestMapping(value="subRegister",method=RequestMethod.POST)
 	@ResponseBody
 	public Map<String,Object> subRegister(String vcode,UUser entity){
-		resultMap.put("status", 400);
+		resultMap.put("result", "fail");
+		resultMap.put("status", 500);
 		if(!VerifyCodeUtils.verifyCode(vcode)){
-			resultMap.put("message", "验证码不正确！");
+			resultMap.put("desc", "验证码不正确！");
+			resultMap.put("data", null);
 			return resultMap;
 		}
 
@@ -101,7 +103,7 @@ public class UserLoginController extends BaseController {
 
 		UUser user = userService.findUserByLoginName(loginName);
 		if(null != user){
-			resultMap.put("message", "帐号已经存在！");
+			resultMap.put("desc", "帐号已经存在！");
 			return resultMap;
 		}
 		/* else  发送手机短信验证码  */
@@ -121,8 +123,9 @@ public class UserLoginController extends BaseController {
 		LoggerUtils.fmtDebug(getClass(), "注册插入完毕！", JSONObject.fromObject(entity).toString());
 		entity = TokenManager.login(entity, Boolean.TRUE);
 		LoggerUtils.fmtDebug(getClass(), "注册后，登录完毕！", JSONObject.fromObject(entity).toString());
-		resultMap.put("message", "注册成功！");
+		resultMap.put("desc", "注册成功！");
 		resultMap.put("status", 200);
+		resultMap.put("result", "success");
 		
 		return resultMap;
 	}
@@ -141,7 +144,7 @@ public class UserLoginController extends BaseController {
 		
 		try {
 			UUser login = userService.findUserByLoginName(entity.getLoginName());
-			
+			JSONObject data = new JSONObject();
 			/**
 			 * token太复杂太长，暂时注释掉弃用，将来用
 			 */
@@ -150,13 +153,16 @@ public class UserLoginController extends BaseController {
 			//用用户电话号码作为token PAYLOAD那段加密发送到客户端
 			//String jwtToken = JWT.sign(login, 60L*1000L*30L);
 			String uSession = (String)TokenManager.getSession().getId();
-			
 			login.setSession(uSession);
 			userService.updateByPrimaryKeySelective(login);
-			
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
-			resultMap.put("message", "登录成功");
+			resultMap.put("desc", "登录成功");
 			resultMap.put("session", uSession);
+			data.put("id",login.getId());
+			data.put("nikenam",login.getNickname());
+			resultMap.put("data",data);
+			//resultMap.put("data", login.toString());
 			//resultMap.put("phone", phoneNum);
 			
 			
@@ -184,11 +190,15 @@ public class UserLoginController extends BaseController {
 		 * 这里其实可以直接catch Exception，然后抛出 message即可，但是最好还是各种明细catch 好点。。
 		 */
 		} catch (DisabledAccountException e) {
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "帐号已经禁用");
+			resultMap.put("desc", "帐号已经禁用");
+			resultMap.put("data", null);
 		} catch (Exception e) {
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "帐号或密码错误");
+			resultMap.put("desc", "帐号或密码错误");
+			resultMap.put("data", null);
 		}
 			
 		return resultMap;
@@ -203,10 +213,13 @@ public class UserLoginController extends BaseController {
 	public Map<String,Object> logout(){
 		try {
 			TokenManager.logout();
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 		} catch (Exception e) {
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
 			logger.error("errorMessage:" + e.getMessage());
+			resultMap.put("data", null);
 			LoggerUtils.fmtError(getClass(), e, "退出出现错误，%s。", e.getMessage());
 		}
 		return resultMap;
@@ -229,16 +242,19 @@ public class UserLoginController extends BaseController {
 			//存入Shiro会话session
 			TokenManager.setVal2Session(VerifyCodeUtils.V_CODE, verifyCode);
 			if(test.sendMessage(entity.getphone(),verifyCode,template)){
+				resultMap.put("result", "success");
 				resultMap.put("status", 200);
-				resultMap.put("message", "发送短信验证码成功");
+				resultMap.put("desc", "发送短信验证码成功");
 				resultMap.put("verifyCode", verifyCode);
 			} else {
+				resultMap.put("result", "fail");
 				resultMap.put("status", 500);
-				resultMap.put("message", "调用阿里大于出现错误");
+				resultMap.put("data", null);
+				resultMap.put("desc", "调用阿里大于出现错误");
 			}
 		} catch (Exception e) {
 			resultMap.put("status", 500);
-			resultMap.put("message", "发送短信验证码出现错误");
+			resultMap.put("desc", "发送短信验证码出现错误");
 		}
 		return resultMap;
 	}
@@ -253,10 +269,12 @@ public class UserLoginController extends BaseController {
 	@RequestMapping(value="forgetPassword",method=RequestMethod.POST)
 	@ResponseBody
 	public Map<String,Object> forgetPassword(String vcode,UUser entity){
-		resultMap.put("status", 400);
+		resultMap.put("result", "fail");
+		resultMap.put("status", 500);
 	//	System.out.println(vcode);
 		if(!VerifyCodeUtils.verifyCode(vcode)){ 
-			resultMap.put("message", "验证码不正确！");
+			resultMap.put("desc", "验证码不正确！");
+			resultMap.put("data", null);
 			return resultMap;
 		}
 
@@ -264,16 +282,16 @@ public class UserLoginController extends BaseController {
 		String loginName =  entity.getLoginName();
 		String newPsswd =  entity.getPassword();
 	//	System.out.println(phone);
-		resultMap.put("message",loginName);
+		resultMap.put("desc",loginName);
 		//根据用户手机号查询。
 		UUser user = userService.findUserByLoginName(loginName);
 		if(null == user){
-			resultMap.put("message", "帐号不存在！");
+			resultMap.put("desc", "帐号不存在！");
 			return resultMap;
 		}
 		if("admin".equals(loginName)){
 			resultMap.put("status", 300);
-			resultMap.put("message", "管理员不准修改密码。");
+			resultMap.put("desc", "管理员不准修改密码。");
 			return resultMap;
 		}
 		user.setPassword(newPsswd);
@@ -281,8 +299,9 @@ public class UserLoginController extends BaseController {
 		user = UserManager.md5Pswd(user);
 		//修改密码
 		userService.updateByPrimaryKeySelective(user);
+		resultMap.put("result", "success");
 		resultMap.put("status", 200);
-		resultMap.put("message", "密码重置成功!");
+		resultMap.put("desc", "密码重置成功!");
 		//重新登录一次
 	//	TokenManager.login(entity, Boolean.TRUE);
 		return resultMap;
@@ -296,9 +315,11 @@ public class UserLoginController extends BaseController {
 	@RequestMapping(value="updatePassword",method=RequestMethod.POST)
 	@ResponseBody
 	public Map<String,Object> updatePassword(String vcode,UUser entity){
-		resultMap.put("status", 400);
+		resultMap.put("result", "fail");
+		resultMap.put("status", 500);
 		if(!VerifyCodeUtils.verifyCode(vcode)){
-			resultMap.put("message", "验证码不正确！");
+			resultMap.put("desc", "验证码不正确！");
+			resultMap.put("data", null);
 			return resultMap;
 		}
 
@@ -307,12 +328,12 @@ public class UserLoginController extends BaseController {
 		//根据用户手机号查询。
 		UUser user = userService.findUserByLoginName(loginName);
 		if(null == user){
-			resultMap.put("message", "帐号不存在！");
+			resultMap.put("desc", "帐号不存在！");
 			return resultMap;
 		}
 		if("admin".equals(loginName)){
 			resultMap.put("status", 300);
-			resultMap.put("message", "管理员不准修改密码。");
+			resultMap.put("desc", "管理员不准修改密码。");
 			return resultMap;
 		}
 		user.setPassword(newPsswd);
@@ -322,8 +343,9 @@ public class UserLoginController extends BaseController {
 		*/
 		//修改密码
 		userService.updateByPrimaryKeySelective(user);
+		resultMap.put("result", "success");
 		resultMap.put("status", 200);
-		resultMap.put("message", "密码重置成功!");
+		resultMap.put("desc", "密码重置成功!");
 		//重新登录一次
 		TokenManager.login(entity, Boolean.TRUE);
 		return resultMap;

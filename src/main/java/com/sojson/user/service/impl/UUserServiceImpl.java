@@ -108,12 +108,15 @@ public class UUserServiceImpl extends BaseMybatisDao<UUserMapper> implements UUs
 			for (String id : idArray) {
 				count+=this.deleteByPrimaryKey(new Long(id));
 			}
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 			resultMap.put("count", count);
 		} catch (Exception e) {
 			LoggerUtils.fmtError(getClass(), e, "根据IDS删除用户出现错误，ids[%s]", ids);
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "删除出现错误，请刷新后再试！");
+			resultMap.put("desc", "删除出现错误，请刷新后再试！");
+			resultMap.put("data", null);
 		}
 		return resultMap;
 	}
@@ -128,12 +131,14 @@ public class UUserServiceImpl extends BaseMybatisDao<UUserMapper> implements UUs
 			
 			//如果当前用户在线，需要标记并且踢出
 			customSessionManager.forbidUserById(id,status);
-			
-			
+
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 		} catch (Exception e) {
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "操作失败，请刷新再试！");
+			resultMap.put("desc", "操作失败，请刷新再试！");
+			resultMap.put("data", null);
 			LoggerUtils.fmtError(getClass(), "禁止或者激活用户登录失败，id[%s],status[%s]", id,status);
 		}
 		return resultMap;
@@ -177,11 +182,14 @@ public class UUserServiceImpl extends BaseMybatisDao<UUserMapper> implements UUs
 					}
 				}
 			}
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
-			resultMap.put("message", "操作成功");
+			resultMap.put("desc", "操作成功");
 		} catch (Exception e) {
-			resultMap.put("status", 200);
-			resultMap.put("message", "操作失败，请重试！");
+			resultMap.put("result", "fail");
+			resultMap.put("status", 500);
+			resultMap.put("desc", "操作失败，请重试！");
+			resultMap.put("data", null);
 		}
 		//清空用户的权限，迫使再次获取权限的时候，得重新加载
 		TokenManager.clearUserAuthByUserId(userId);
@@ -196,11 +204,14 @@ public class UUserServiceImpl extends BaseMybatisDao<UUserMapper> implements UUs
 		try {
 			resultMap.put("userIds", userIds);
 			userRoleMapper.deleteRoleByUserIds(resultMap);
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
-			resultMap.put("message", "操作成功");
+			resultMap.put("desc", "操作成功");
 		} catch (Exception e) {
-			resultMap.put("status", 200);
-			resultMap.put("message", "操作失败，请重试！");
+			resultMap.put("result", "fail");
+			resultMap.put("status", 500);
+			resultMap.put("desc", "操作失败，请重试！");
+			resultMap.put("data", null);
 		}
 		return resultMap;
 	

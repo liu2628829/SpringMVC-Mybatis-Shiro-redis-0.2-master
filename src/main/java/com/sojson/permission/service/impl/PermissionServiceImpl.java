@@ -91,6 +91,7 @@ public class PermissionServiceImpl extends BaseMybatisDao<UPermissionMapper> imp
 					successCount+=this.deleteByPrimaryKey(id);
 				}
 			}
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 			//如果有成功的，也有失败的，提示清楚。
 			if(errorCount > 0){
@@ -101,8 +102,10 @@ public class PermissionServiceImpl extends BaseMybatisDao<UPermissionMapper> imp
 			resultMap.put("resultMsg", resultMsg);
 		} catch (Exception e) {
 			LoggerUtils.fmtError(getClass(), e, "根据IDS删除用户出现错误，ids[%s]", ids);
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "删除出现错误，请刷新后再试！");
+			resultMap.put("data", null);
+			resultMap.put("desc", "删除出现错误，请刷新后再试！");
 		}
 		return resultMap;
 	}
@@ -154,11 +157,14 @@ public class PermissionServiceImpl extends BaseMybatisDao<UPermissionMapper> imp
 					}
 				}
 			}
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
-			resultMap.put("message", "操作成功");
+			resultMap.put("desc", "操作成功");
 		} catch (Exception e) {
-			resultMap.put("status", 200);
-			resultMap.put("message", "操作失败，请重试！");
+			resultMap.put("result", "fail");
+			resultMap.put("status", 500);
+			resultMap.put("data", null);
+			resultMap.put("desc", "操作失败，请重试！");
 		}
 		//清空拥有角色Id为：roleId 的用户权限已加载数据，让权限数据重新加载
 		List<Long> userIds = userRoleMapper.findUserIdByRoleId(roleId);
@@ -175,11 +181,14 @@ public class PermissionServiceImpl extends BaseMybatisDao<UPermissionMapper> imp
 		try {
 			resultMap.put("roleIds", roleIds);
 			rolePermissionMapper.deleteByRids(resultMap);
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
-			resultMap.put("message", "操作成功");
+			resultMap.put("desc", "操作成功");
 		} catch (Exception e) {
-			resultMap.put("status", 200);
-			resultMap.put("message", "操作失败，请重试！");
+			resultMap.put("result", "fail");
+			resultMap.put("status", 500);
+			resultMap.put("data", null);
+			resultMap.put("desc", "操作失败，请重试！");
 		}
 		return resultMap;
 	}

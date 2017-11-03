@@ -66,11 +66,14 @@ public class PermissionController extends BaseController {
 	public Map<String,Object> addPermission(UPermission psermission){
 		try {
 			UPermission entity = permissionService.insertSelective(psermission);
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 			resultMap.put("entity", entity);
 		} catch (Exception e) {
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "添加失败，请刷新后再试！");
+			resultMap.put("desc", "添加失败，请刷新后再试！");
+			resultMap.put("data", null);
 			LoggerUtils.fmtError(getClass(), e, "添加权限报错。source[%s]", psermission.toString());
 		}
 		return resultMap;

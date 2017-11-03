@@ -79,24 +79,27 @@ public class UserCoreController extends BaseController {
 		String loginName = TokenManager.getToken().getLoginName();
 				password = UserManager.md5Pswd(loginName, password);
 		UUser	user = userService.login(loginName, password);
-		
+		resultMap.put("result", "fail");
+		resultMap.put("data", null);
+
 		if("admin".equals(loginName)){
 			resultMap.put("status", 300);
-			resultMap.put("message", "管理员不准修改密码。");
+			resultMap.put("desc", "管理员不准修改密码。");
 			return resultMap;
 		}
 		
 		if(null == user){
 			resultMap.put("status", 300);
-			resultMap.put("message", "密码不正确！");
+			resultMap.put("desc", "密码不正确！");
 		}else{
 			user.setPassword(newPassword);
 			//加工密码
 			user = UserManager.md5Pswd(user);
 			//修改密码
 			userService.updateByPrimaryKeySelective(user);
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
-			resultMap.put("message", "修改成功!");
+			resultMap.put("desc", "修改成功!");
 			//重新登录一次
 			TokenManager.login(user, Boolean.TRUE);
 		}
@@ -111,11 +114,14 @@ public class UserCoreController extends BaseController {
 	public Map<String,Object> updateSelf(UUser entity){
 		try {
 			userService.updateByPrimaryKeySelective(entity);
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
-			resultMap.put("message", "修改成功!");
+			resultMap.put("desc", "修改成功!");
 		} catch (Exception e) {
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "修改失败!");
+			resultMap.put("desc", "修改失败!");
+			resultMap.put("data", null);
 			LoggerUtils.fmtError(getClass(), e, "修改个人资料出错。[%s]", JSONObject.fromObject(entity).toString());
 		}
 		return resultMap;

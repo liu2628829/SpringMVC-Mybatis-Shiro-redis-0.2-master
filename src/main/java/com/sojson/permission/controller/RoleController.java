@@ -64,11 +64,14 @@ public class RoleController extends BaseController {
 	public Map<String,Object> addRole(URole role){
 		try {
 			int count = roleService.insertSelective(role);
+			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 			resultMap.put("successCount", count);
 		} catch (Exception e) {
+			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
-			resultMap.put("message", "添加失败，请刷新后再试！");
+			resultMap.put("desc", "添加失败，请刷新后再试！");
+			resultMap.put("data", null);
 			LoggerUtils.fmtError(getClass(), e, "添加角色报错。source[%s]",role.toString());
 		}
 		return resultMap;

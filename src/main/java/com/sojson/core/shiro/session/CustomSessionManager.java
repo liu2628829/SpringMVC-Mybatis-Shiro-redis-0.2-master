@@ -174,14 +174,16 @@ public class CustomSessionManager {
 				session.setAttribute(SESSION_STATUS, sessionStatus);
 				customShiroSessionDAO.update(session);
 			}
+			map.put("result", "success");
 			map.put("status", 200);
 			map.put("sessionStatus", status?1:0);
 			map.put("sessionStatusText", status?"踢出":"激活");
 			map.put("sessionStatusTextTd", status?"有效":"已踢出");
 		} catch (Exception e) {
 			LoggerUtils.fmtError(getClass(), e, "改变Session状态错误，sessionId[%s]", sessionIds);
+			map.put("result", "fail");
 			map.put("status", 500);
-			map.put("message", "改变失败，有可能Session不存在，请刷新再试！");
+			map.put("desc", "改变失败，有可能Session不存在，请刷新再试！");
 		}
 		return map;
 	}

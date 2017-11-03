@@ -36,6 +36,7 @@ public class CommonController extends BaseController {
 	@ResponseBody
 	public Map<String,Object> refreshDB(){
 		roleService.initData();
+		resultMap.put("result", "success");
 		resultMap.put("status", 200);
 		return resultMap;
 	}
@@ -68,7 +69,7 @@ public class CommonController extends BaseController {
 		}
 		String message = t.getMessage() ;//错误信息
 		StackTraceElement[] stack = t.getStackTrace();
-		view.addObject("message", message);
+		view.addObject("desc", message);
 		if(null != stack && stack.length != 0 ){
 			StackTraceElement element = stack[0];
 			int line = element.getLineNumber();//错误行号

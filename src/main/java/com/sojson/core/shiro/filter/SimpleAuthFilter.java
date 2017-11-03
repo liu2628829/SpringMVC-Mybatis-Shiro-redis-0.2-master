@@ -59,7 +59,7 @@ public class SimpleAuthFilter extends AccessControlFilter {
 			if (ShiroFilterUtils.isAjax(request) ) {
 				LoggerUtils.debug(getClass(), "当前用户已经被踢出，并且是Ajax请求！");
 				resultMap.put("user_status", "300");
-				resultMap.put("message", "您已经被踢出，请重新登录！");
+				resultMap.put("desc", "您已经被踢出，请重新登录！");
 				out(response, resultMap);
 			}
 			return  Boolean.FALSE;
