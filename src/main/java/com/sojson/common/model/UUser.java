@@ -127,6 +127,12 @@ public class UUser implements Serializable{
     public String toString(){
     	return JSONObject.fromObject(this).toString();
     }
+    public JSONObject toJson(){
+        JSONObject obj = JSONObject.fromObject(this);
+        return obj;
+    }
+    //JSONObject json = JSONObject.fromObject(obj);//将java对象转换为json对象
+
 	public void setSession(String sessionId) {
 		this.sessionId = sessionId;
 		

@@ -158,7 +158,7 @@ public class UserLoginController extends BaseController {
 			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 			resultMap.put("desc", "登录成功");
-			resultMap.put("session", uSession);
+			resultMap.put("token", uSession);
 			data.put("id",login.getId());
 			data.put("nikenam",login.getNickname());
 			resultMap.put("data",data);
