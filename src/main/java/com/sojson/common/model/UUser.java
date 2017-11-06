@@ -35,9 +35,9 @@ public class UUser implements Serializable{
 	private Long id;
 	/**昵称*/
     private String nickname;
-    /**电话  */
-    private String loginName;
     /**登录帐号*/
+    private String loginName;
+    /**电话  */
     private String phone;
     /**密码*/
     private transient String password;

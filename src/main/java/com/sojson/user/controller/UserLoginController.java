@@ -59,56 +59,65 @@ public class UserLoginController extends BaseController {
 
 	@Resource
 	UUserService userService;
-	
+
 	/**
 	 * 登录跳转
+	 *
 	 * @return
 	 */
-	@RequestMapping(value="login",method=RequestMethod.GET)
-	public ModelAndView login(){
-		
+	@RequestMapping(value = "login", method = RequestMethod.GET)
+	public ModelAndView login() {
+
 		return new ModelAndView("user/login");
 	}
+
 	/**
 	 * 注册跳转
+	 *
 	 * @return
 	 */
-	@RequestMapping(value="register",method=RequestMethod.GET)
-	public ModelAndView register(){
-		
+	@RequestMapping(value = "register", method = RequestMethod.GET)
+	public ModelAndView register() {
+
 		return new ModelAndView("user/register");
 	}
+
 	/**
 	 * 注册 && 登录
-	 * @param vcode		验证码	
-	 * @param entity	UUser实体
+	 *
+	 * @param vcode  验证码
+	 * @param entity UUser实体
 	 * @return
 	 */
-	@RequestMapping(value="subRegister",method=RequestMethod.POST)
+	@RequestMapping(value = "subRegister", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> subRegister(String vcode,UUser entity){
+	public Map<String, Object> subRegister(String vcode, UUser entity) {
 		resultMap.put("result", "fail");
 		resultMap.put("status", 500);
-		if(!VerifyCodeUtils.verifyCode(vcode)){
+		if (vcode == null || vcode.length() <= 0) {
+			resultMap.put("desc", "验证码为空！");
+			resultMap.put("data", null);
+			return resultMap;
+		}
+		if (!VerifyCodeUtils.verifyCode(vcode)) {
 			resultMap.put("desc", "验证码不正确！");
 			resultMap.put("data", null);
 			return resultMap;
 		}
 
-		String loginName =  entity.getLoginName();
+		String loginName = entity.getLoginName();
 /*		//
 		AlidayuSMS test = new AlidayuSMS();
 		test.sendMessage(phone);
 		*/
 
 		UUser user = userService.findUserByLoginName(loginName);
-		if(null != user){
+		if (null != user) {
 			resultMap.put("desc", "帐号已经存在！");
 			return resultMap;
 		}
 		/* else  发送手机短信验证码  */
-	//	else AlidayuSMS.sendMessage(phone);
-
+		//	else AlidayuSMS.sendMessage(phone);
 
 
 		Date date = new Date();
@@ -118,7 +127,7 @@ public class UserLoginController extends BaseController {
 		entity = UserManager.md5Pswd(entity);
 		//设置有效
 		entity.setStatus(UUser._1);
-		
+
 		entity = userService.insert(entity);
 		LoggerUtils.fmtDebug(getClass(), "注册插入完毕！", JSONObject.fromObject(entity).toString());
 		entity = TokenManager.login(entity, Boolean.TRUE);
@@ -126,22 +135,23 @@ public class UserLoginController extends BaseController {
 		resultMap.put("desc", "注册成功！");
 		resultMap.put("status", 200);
 		resultMap.put("result", "success");
-		
+
 		return resultMap;
 	}
 
-	
+
 	/**
 	 * 登录提交
 	 * Token verification function added by Chenney
-	 * @param entity		登录的UUser
-	 * @param request		request，用来取登录之前Url地址，用来登录后跳转到没有登录之前的页面。
+	 *
+	 * @param entity  登录的UUser
+	 * @param request request，用来取登录之前Url地址，用来登录后跳转到没有登录之前的页面。
 	 * @return
 	 */
-	@RequestMapping(value="submitLogin",method=RequestMethod.POST)
+	@RequestMapping(value = "submitLogin", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> submitLogin(UUser entity, HttpServletRequest request){
-		
+	public Map<String, Object> submitLogin(UUser entity, HttpServletRequest request) {
+
 		try {
 			UUser login = userService.findUserByLoginName(entity.getLoginName());
 			JSONObject data = new JSONObject();
@@ -152,43 +162,43 @@ public class UserLoginController extends BaseController {
 			//String phoneNum = login.getphone();
 			//用用户电话号码作为token PAYLOAD那段加密发送到客户端
 			//String jwtToken = JWT.sign(login, 60L*1000L*30L);
-			String uSession = (String)TokenManager.getSession().getId();
+			String uSession = (String) TokenManager.getSession().getId();
 			login.setSession(uSession);
 			userService.updateByPrimaryKeySelective(login);
 			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 			resultMap.put("desc", "登录成功");
 			resultMap.put("token", uSession);
-			data.put("id",login.getId());
-			data.put("nikenam",login.getNickname());
-			resultMap.put("data",data);
+//			data.put("id",login.getId());
+//			data.put("nikename",login.getNickname());
+			resultMap.put("data", TokenManager.getToken());
 			//resultMap.put("data", login.toString());
 			//resultMap.put("phone", phoneNum);
-			
-			
+
+
 			/**
 			 * shiro 获取登录之前的地址
 			 * 之前0.1版本这个没判断空。
 			 */
 			SavedRequest savedRequest = WebUtils.getSavedRequest(request);
-			String url = null ;
-			if(null != savedRequest){
+			String url = null;
+			if (null != savedRequest) {
 				url = savedRequest.getRequestUrl();
 			}
 			/**
 			 * 我们平常用的获取上一个请求的方式，在Session不一致的情况下是获取不到的
 			 * String url = (String) request.getAttribute(WebUtils.FORWARD_REQUEST_URI_ATTRIBUTE);
 			 */
-			LoggerUtils.fmtDebug(getClass(), "获取登录之前的URL:[%s]",url);
+			LoggerUtils.fmtDebug(getClass(), "获取登录之前的URL:[%s]", url);
 			//如果登录之前没有地址，那么就跳转到首页。
-			if(StringUtils.isBlank(url)){
+			if (StringUtils.isBlank(url)) {
 				url = request.getContextPath() + "/user/index.shtml";
 			}
 			//跳转地址
 			resultMap.put("back_url", url);
-		/**
-		 * 这里其实可以直接catch Exception，然后抛出 message即可，但是最好还是各种明细catch 好点。。
-		 */
+			/**
+			 * 这里其实可以直接catch Exception，然后抛出 message即可，但是最好还是各种明细catch 好点。。
+			 */
 		} catch (DisabledAccountException e) {
 			resultMap.put("result", "fail");
 			resultMap.put("status", 500);
@@ -200,17 +210,18 @@ public class UserLoginController extends BaseController {
 			resultMap.put("desc", "帐号或密码错误");
 			resultMap.put("data", null);
 		}
-			
+
 		return resultMap;
 	}
-	
+
 	/**
 	 * 退出
+	 *
 	 * @return
 	 */
-	@RequestMapping(value="logout",method =RequestMethod.GET)
+	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	@ResponseBody
-	public Map<String,Object> logout(){
+	public Map<String, Object> logout() {
 		try {
 			TokenManager.logout();
 			resultMap.put("result", "success");
@@ -228,20 +239,21 @@ public class UserLoginController extends BaseController {
 
 	/**
 	 * 获取验证码
-	 * @param entity	登录的UUser
-	 * @param template	选择短信模板，0是用户注册，1是修改密码
+	 *
+	 * @param entity   登录的UUser
+	 * @param template 选择短信模板，0是用户注册，1是修改密码
 	 * @return
 	 */
-	@RequestMapping(value="getMessage",method=RequestMethod.POST)
+	@RequestMapping(value = "getMessage", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> getMessage(UUser entity,int template) {
+	public Map<String, Object> getMessage(UUser entity, int template) {
 		try {
-			AlidayuSMS test = new AlidayuSMS();
+			AlidayuSMS sendMessage = new AlidayuSMS();
 			//生成随机字串
 			String verifyCode = VerifyCodeUtils.generateVerifyCode(6);
 			//存入Shiro会话session
 			TokenManager.setVal2Session(VerifyCodeUtils.V_CODE, verifyCode);
-			if(test.sendMessage(entity.getphone(),verifyCode,template)){
+			if (sendMessage.sendMessage(entity.getLoginName(), verifyCode, template)) {
 				resultMap.put("result", "success");
 				resultMap.put("status", 200);
 				resultMap.put("desc", "发送短信验证码成功");
@@ -262,34 +274,40 @@ public class UserLoginController extends BaseController {
 
 	/**
 	 * 忘记密码
-	 * @param vcode		验证码
-	 * @param entity	UUser实体
+	 *
+	 * @param vcode  验证码
+	 * @param entity UUser实体
 	 * @return
 	 */
-	@RequestMapping(value="forgetPassword",method=RequestMethod.POST)
+	@RequestMapping(value = "forgetPassword", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> forgetPassword(String vcode,UUser entity){
+	public Map<String, Object> forgetPassword(String vcode, UUser entity) {
 		resultMap.put("result", "fail");
 		resultMap.put("status", 500);
-	//	System.out.println(vcode);
-		if(!VerifyCodeUtils.verifyCode(vcode)){ 
+		//	System.out.println(vcode);
+		if ((vcode == null || vcode.length() <= 0)) {
+			resultMap.put("desc", "验证码为空！");
+			resultMap.put("data", null);
+			return resultMap;
+		}
+		if (!VerifyCodeUtils.verifyCode(vcode)) {
 			resultMap.put("desc", "验证码不正确！");
 			resultMap.put("data", null);
 			return resultMap;
 		}
 
 		//获取手机号和新密码
-		String loginName =  entity.getLoginName();
-		String newPsswd =  entity.getPassword();
-	//	System.out.println(phone);
-		resultMap.put("desc",loginName);
+		String loginName = entity.getLoginName();
+		String newPsswd = entity.getPassword();
+		//	System.out.println(phone);
+		resultMap.put("desc", loginName);
 		//根据用户手机号查询。
 		UUser user = userService.findUserByLoginName(loginName);
-		if(null == user){
+		if (null == user) {
 			resultMap.put("desc", "帐号不存在！");
 			return resultMap;
 		}
-		if("admin".equals(loginName)){
+		if ("admin".equals(loginName)) {
 			resultMap.put("status", 300);
 			resultMap.put("desc", "管理员不准修改密码。");
 			return resultMap;
@@ -303,35 +321,37 @@ public class UserLoginController extends BaseController {
 		resultMap.put("status", 200);
 		resultMap.put("desc", "密码重置成功!");
 		//重新登录一次
-	//	TokenManager.login(entity, Boolean.TRUE);
+		//	TokenManager.login(entity, Boolean.TRUE);
 		return resultMap;
 	}
+
 	/**
 	 * 忘记密码
-	 * @param vcode		验证码
-	 * @param entity	UUser实体
+	 *
+	 * @param vcode  验证码
+	 * @param entity UUser实体
 	 * @return
 	 */
-	@RequestMapping(value="updatePassword",method=RequestMethod.POST)
+	@RequestMapping(value = "updatePassword", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String,Object> updatePassword(String vcode,UUser entity){
+	public Map<String, Object> updatePassword(String vcode, UUser entity) {
 		resultMap.put("result", "fail");
 		resultMap.put("status", 500);
-		if(!VerifyCodeUtils.verifyCode(vcode)){
+		if (!VerifyCodeUtils.verifyCode(vcode)) {
 			resultMap.put("desc", "验证码不正确！");
 			resultMap.put("data", null);
 			return resultMap;
 		}
 
-		String loginName =  entity.getLoginName();
-		String newPsswd =  entity.getPassword();
+		String loginName = entity.getLoginName();
+		String newPsswd = entity.getPassword();
 		//根据用户手机号查询。
 		UUser user = userService.findUserByLoginName(loginName);
-		if(null == user){
+		if (null == user) {
 			resultMap.put("desc", "帐号不存在！");
 			return resultMap;
 		}
-		if("admin".equals(loginName)){
+		if ("admin".equals(loginName)) {
 			resultMap.put("status", 300);
 			resultMap.put("desc", "管理员不准修改密码。");
 			return resultMap;
@@ -350,28 +370,6 @@ public class UserLoginController extends BaseController {
 		TokenManager.login(entity, Boolean.TRUE);
 		return resultMap;
 	}
-
-	//public static void main(String[] args){
-		//UserLoginController test = new UserLoginController();
-		//UUser user = new UUser();
-//		user.setNickname("aaa");
-		//user.setLoginName("15519089033");
-		//user.setPassword("123123");
-	//	test.forgetPswd(user);
-	//	Map<String,Object> a = test.getMessage(user);
-		//a.get("verifyCode");
-	//	System.out.println(a.get("verifyCode"));
-		//user.setPswd("57eb72e6b78a87a12d46a7f5e9315138");
-
-	//	system.
-
-	//	user = TokenManager.login(user,false);
-
-//		test.getMessage1();
-
-//	}
-
-
 
 }
 
