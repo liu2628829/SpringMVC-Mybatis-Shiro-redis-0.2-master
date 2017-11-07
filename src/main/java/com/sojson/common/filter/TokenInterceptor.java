@@ -42,7 +42,7 @@ public class TokenInterceptor implements HandlerInterceptor{
 			String phoneNum = request.getParameter("phoneNumber");
 			//解密token后的phoneNum与用户传来的phoneNum不一致，一般都是token过期
 			if(null != phoneNum && null != login) {
-				if(phoneNum.equals(login.getphone())) {
+				if(phoneNum.equals(login.getLoginName())) {
 					return true;
 				}
 				else

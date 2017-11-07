@@ -35,20 +35,28 @@ public class UUser implements Serializable{
 	private Long id;
 	/**昵称*/
     private String nickname;
-    /**电话  */
-    private String loginName;
     /**登录帐号*/
+    private String loginName;
+    /**电话  */
     private String phone;
     /**密码*/
     private transient String password;
+    /**记录用户状态的SessionId**/
+    private String sessionId;
     /**创建时间*/
     private Date createTime;
     /**最后登录时间*/
     private Date lastLoginTime;
     /**1:有效，0:禁止登录*/
     private Long status;
-    /**记录用户状态的SessionId**/
-    private String sessionId;
+    /**性别 1:女，0:男*/
+    private Long sex;
+    /**年龄段*/
+    private Long age;
+    /**注册用户计数*/
+    private String registerCount;
+    /**头像*/
+    private String userLogo;
     
     
     
@@ -62,6 +70,10 @@ public class UUser implements Serializable{
 		this.sessionId = user.getSession();
 		this.createTime = user.getCreateTime();
 		this.lastLoginTime = user.getLastLoginTime();
+        this.sex  = user.getSex();
+        this.age = user.getAge();
+        this.registerCount = user.getRegisterCount();
+        this.userLogo = user.getUserLogo();
 	}
 
 
@@ -140,4 +152,38 @@ public class UUser implements Serializable{
 	public String getSession() {
 		return sessionId;
 	}
+
+    public Long getSex() {
+        return sex;
+    }
+
+    public void setSex(Long sex) {
+        this.sex = sex;
+    }
+
+    public Long getAge() {
+        return age;
+    }
+
+    public void setAge(Long age) {
+        this.age = age;
+    }
+
+    public String getRegisterCount() {
+        return registerCount;
+    }
+
+    public void setRegisterCount(String registerCount) {
+        this.registerCount = registerCount;
+    }
+
+    public String getUserLogo() {
+        return userLogo;
+    }
+
+    public void setUserLogo(String userLogo) {
+        this.userLogo = userLogo;
+    }
 }
+
+
