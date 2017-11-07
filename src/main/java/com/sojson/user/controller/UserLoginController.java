@@ -135,7 +135,10 @@ public class UserLoginController extends BaseController {
 		resultMap.put("desc", "注册成功！");
 		resultMap.put("status", 200);
 		resultMap.put("result", "success");
+<<<<<<< HEAD
 		resultMap.put("data", null);
+=======
+>>>>>>> 78c7f83ae38759e1c561c9618cc9944bf397a926
 
 		return resultMap;
 	}
@@ -169,6 +172,7 @@ public class UserLoginController extends BaseController {
 			resultMap.put("result", "success");
 			resultMap.put("status", 200);
 			resultMap.put("desc", "登录成功");
+<<<<<<< HEAD
 			resultMap.put("tokenId", uSession);
 			resultMap.put("uType", "0");//0是普通用户，1是企业用户
 			data.put("id",login.getId());
@@ -183,6 +187,12 @@ public class UserLoginController extends BaseController {
 
 			//resultMap.put("data", TokenManager.getToken());
 			resultMap.put("data", data);
+=======
+			resultMap.put("token", uSession);
+//			data.put("id",login.getId());
+//			data.put("nikename",login.getNickname());
+			resultMap.put("data", TokenManager.getToken());
+>>>>>>> 78c7f83ae38759e1c561c9618cc9944bf397a926
 			//resultMap.put("data", login.toString());
 			//resultMap.put("phone", phoneNum);
 
@@ -206,7 +216,11 @@ public class UserLoginController extends BaseController {
 				url = request.getContextPath() + "/user/index.shtml";
 			}
 			//跳转地址
+<<<<<<< HEAD
 		//	resultMap.put("back_url", url);
+=======
+			resultMap.put("back_url", url);
+>>>>>>> 78c7f83ae38759e1c561c9618cc9944bf397a926
 			/**
 			 * 这里其实可以直接catch Exception，然后抛出 message即可，但是最好还是各种明细catch 好点。。
 			 */

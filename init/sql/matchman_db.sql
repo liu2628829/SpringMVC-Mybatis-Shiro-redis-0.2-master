@@ -10,7 +10,11 @@ Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
+<<<<<<< HEAD
 Date: 2017-11-07 17:18:06
+=======
+Date: 2017-11-06 17:37:38
+>>>>>>> 78c7f83ae38759e1c561c9618cc9944bf397a926
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -250,17 +254,30 @@ CREATE TABLE `u_user` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `last_login_time` datetime DEFAULT NULL COMMENT '最后登录时间',
   `status` bigint(1) DEFAULT '1' COMMENT '1:有效，0:禁止登录',
+<<<<<<< HEAD
   `sex` bigint(8) DEFAULT NULL,
   `age` bigint(8) DEFAULT NULL,
   `register_count` varchar(20) DEFAULT NULL,
   `user_logo` varchar(100) DEFAULT NULL COMMENT '用户头像（url）',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+=======
+  `sex` int(8) DEFAULT NULL,
+  `age` int(8) DEFAULT NULL,
+  `register_count` varchar(20) DEFAULT NULL,
+  `user_logo` varchar(100) DEFAULT NULL COMMENT '用户头像（url）',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+>>>>>>> 78c7f83ae38759e1c561c9618cc9944bf397a926
 
 -- ----------------------------
 -- Records of u_user
 -- ----------------------------
+<<<<<<< HEAD
 INSERT INTO `u_user` VALUES ('1', '管理员', 'admin', 'admin', '57eb72e6b78a87a12d46a7f5e9315138', '965cff05-26ba-46d8-8cde-7f209641f50b', '2016-06-16 11:15:33', '2017-11-02 16:10:51', '1', '0', '90', null, 'http://img01.taopic.com/141025/234987-1410250J11189.jpg');
+=======
+INSERT INTO `u_user` VALUES ('1', '管理员', 'admin', 'admin', '57eb72e6b78a87a12d46a7f5e9315138', '4dab132d-6cf2-4c2c-8a1f-e5976b96bfc0', '2016-06-16 11:15:33', '2017-11-02 16:10:51', '1', null, '53', null, null);
+>>>>>>> 78c7f83ae38759e1c561c9618cc9944bf397a926
 INSERT INTO `u_user` VALUES ('3', 'dick', '13902588133', 'admin1', '0d53f25a0ba6a9f96ef2227c4450fcdf', null, '2017-10-22 16:35:38', '2017-10-22 16:35:38', '1', null, '34', null, null);
 INSERT INTO `u_user` VALUES ('11', 'soso', '8446666@qq.com', '2', 'd57ffbe486910dd5b26d0167d034f9ad', null, '2016-05-26 20:50:54', '2016-06-16 11:24:35', '1', null, '35', null, null);
 INSERT INTO `u_user` VALUES ('12', '8446666', '8446666', 'admin3', '4afdc875a67a55528c224ce088be2ab8', null, '2016-05-27 22:34:19', '2016-06-15 17:03:16', '1', null, '54', null, null);
@@ -271,7 +288,10 @@ INSERT INTO `u_user` VALUES ('16', 'gr', '1111111', 'woaini', 'c35c0724734c34786
 INSERT INTO `u_user` VALUES ('17', '123456789', '844633', 'hkjh', 'fa1d6cf4a32c30953ec82ef1627df569', null, '2017-11-02 16:29:13', '2017-11-02 16:29:13', '1', null, null, null, null);
 INSERT INTO `u_user` VALUES ('18', '123456789', null, '844633', '3c96a7a87b8706856019355166dc5a3f', null, '2017-11-02 16:42:54', '2017-11-02 16:42:55', '1', null, null, null, null);
 INSERT INTO `u_user` VALUES ('19', '123456789', null, '84463344', '248aab3d20ae36c9cd36e5fb179ed021', null, '2017-11-04 11:35:18', '2017-11-04 11:35:19', '1', null, null, null, null);
+<<<<<<< HEAD
 INSERT INTO `u_user` VALUES ('20', '1234567891', null, '844633444', 'dfa927126ad73976ec26e9578a57db22', null, '2017-11-07 09:12:28', '2017-11-07 09:12:30', '1', '0', '50', null, null);
+=======
+>>>>>>> 78c7f83ae38759e1c561c9618cc9944bf397a926
 
 -- ----------------------------
 -- Table structure for u_user_role
